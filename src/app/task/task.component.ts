@@ -15,10 +15,10 @@ export class TaskComponent implements OnInit {
   @Input() task: Task;
   constructor(
     private route: ActivatedRoute,
-    private taskService: TaskService,
+    private taskService: TaskService
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getTask();
   }
 

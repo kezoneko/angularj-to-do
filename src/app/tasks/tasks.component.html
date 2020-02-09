@@ -1,4 +1,9 @@
-<p>tasks works!</p>
 <ul>
-    <li *ngFor="let task of tasks">{{ task.title }}</li>
+    <li *ngFor="let task of tasks">
+        <button>V</button>
+        <a routerLink="/task/{{ task.id }}">{{ task.title }}</a>
+        <button>X</button>
+        <button>/</button>
+    </li>
 </ul>
+<button>+</button>
