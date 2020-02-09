@@ -1,0 +1,10 @@
+<div *ngIf="task">
+    <h3>Задание</h3>
+    <button>X</button>
+    <button>/</button>
+    <p>Заголовок: {{ task.title }}</p>
+    <p>Срок выполнения: {{ task.datetime }}</p>
+    <p>Описание: {{ task.description }}</p>
+    <p>Статус: {{ task.status }}</p>
+    <button>V</button>
+</div>
