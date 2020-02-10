@@ -1,2 +1,13 @@
-<h1><a routerLink="/tasks">{{ title }}</a></h1>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" routerLink="/tasks">To-Do</a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
 <router-outlet></router-outlet>
+
+        </main>
+    </div>

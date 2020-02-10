@@ -19,9 +19,6 @@ export class TaskService {
   };
 
   // GET: получение списка всех заданий
-  // getTasks(): Observable<Task[]> {
-  //   return this.http.get<Task[]>(this.tasksUrl);
-  // }
   getTasks(): Observable<Task[]> {
     return this.http.get<Task[]>(this.tasksUrl);
   }

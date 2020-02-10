@@ -1,9 +1,20 @@
-<ul>
-    <li *ngFor="let task of tasks">
-        <button>V</button>
-        <a routerLink="/task/{{ task.id }}">{{ task.title }}</a>
-        <button>X</button>
-        <button>/</button>
-    </li>
-</ul>
-<button>+</button>
+<table class="table table-borderless">
+    <tr *ngFor="let task of tasks">
+        <td>
+            <button class="btn btn-primary btn-circle btn-circle-sm" routerLink="/task/{{ task.id }}"><span>V</span></button>
+            {{ task.date }} <a routerLink="/task/{{ task.id }}">{{ task.title }}</a>[{{ task.title }}]
+        </td>
+        <td class="col-4 text-right">
+            <button class="btn btn-danger btn-circle btn-circle-sm" routerLink="/task/{{ task.id }}"><span>X</span></button>
+            <button class="btn btn-warning btn-circle btn-circle-sm" routerLink="/task/{{ task.id }}"><span>/</span></button>
+        </td>
+    </tr>
+</table>
+
+<div class="container fixed-bottom mb-3">
+    <div class="row">
+        <div class="col text-center">
+            <button class="btn btn-success btn-circle btn-circle-lg" routerLink="/task/"><span>+</span></button>
+        </div>
+    </div>
+</div>
