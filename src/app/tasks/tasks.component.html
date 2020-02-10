@@ -1,12 +1,16 @@
 <table class="table table-borderless">
     <tr *ngFor="let task of tasks">
         <td>
-            <button class="btn btn-primary btn-circle btn-circle-sm" routerLink="/task/{{ task.id }}"><span>V</span></button>
-            {{ task.date }} <a routerLink="/task/{{ task.id }}">{{ task.title }}</a>[{{ task.title }}]
+            <button *ngIf="task.status === false" class="btn btn-primary btn-circle btn-circle-sm" (click)="save()" >
+                <span>V</span>
+                <input type="hidden" [(ngModel)]="task.status">
+            </button>
+            <div *ngIf="task.status" class="btn btn-light btn-circle btn-circle-sm disabled"><span>V</span></div>
+            {{ task.date }} <a routerLink="/tasks/details/{{ task.id }}">{{ task.title }}</a>
         </td>
         <td class="col-4 text-right">
-            <button class="btn btn-danger btn-circle btn-circle-sm" routerLink="/task/{{ task.id }}"><span>X</span></button>
-            <button class="btn btn-warning btn-circle btn-circle-sm" routerLink="/task/{{ task.id }}"><span>/</span></button>
+            <button class="btn btn-danger btn-circle btn-circle-sm" routerLink="/tasks/{{ task.id }}"><span>X</span></button>
+            <button class="btn btn-warning btn-circle btn-circle-sm" routerLink="/tasks/edit/{{ task.id }}"><span>/</span></button>
         </td>
     </tr>
 </table>

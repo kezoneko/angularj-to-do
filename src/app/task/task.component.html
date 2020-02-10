@@ -3,7 +3,7 @@
         <div class="col"><h4>Задание</h4></div>
         <div class="col-4 text-right">
             <button class="btn btn-danger btn-circle btn-circle-sm" href="/Tasks/Delete/1"><span>X</span></button>
-            <button class="btn btn-warning btn-circle btn-circle-sm" href="/Tasks/Edit/1"><span>/</span></button>
+            <button class="btn btn-warning btn-circle btn-circle-sm" routerLink="/tasks/edit/{{ task.id }}"><span>/</span></button>
         </div>
     </div>
     <hr />
@@ -35,7 +35,7 @@
     </dl>
 </div>
 <div>
-    <button href="/">Назад в список</button>
+    <button routerLink="/tasks">Назад в список</button>
 </div>
 
 <div class="container fixed-bottom mb-3">
